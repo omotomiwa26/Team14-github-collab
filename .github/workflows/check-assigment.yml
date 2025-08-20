@@ -1,0 +1,58 @@
+name: Check Assignment Requirements
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  validate-md:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Validate markdown files
+        run: |
+          echo "🔍 Validating assignment requirements..."
+
+          # Ensure at least one markdown file exists
+          md_count=$(ls *.md 2>/dev/null | wc -l)
+          if [ "$md_count" -eq 0 ]; then
+            echo "❌ ERROR: No markdown files found. Each member must add ONE .md file with their name."
+            exit 1
+          fi
+
+          for file in *.md; do
+            echo "➡️ Checking $file..."
+
+            # Rule 1: File should not be README.md
+            if [ "$file" = "README.md" ]; then
+              echo "❌ ERROR in $file: You cannot use README.md. Please create a personal file named after you (e.g., Mary.md)."
+              exit 1
+            fi
+
+            # Rule 2: Must contain Name
+            if ! grep -qi "name" "$file"; then
+              echo "❌ ERROR in $file: Missing 'Name' field. Add a line like: Name: Your Full Name"
+              exit 1
+            fi
+
+            # Rule 3: Must contain Favorite DevOps Tool
+            if ! grep -qi "favorite devops tool" "$file"; then
+              echo "❌ ERROR in $file: Missing 'Favorite DevOps Tool'. Add a line like: Favorite DevOps Tool: Docker"
+              exit 1
+            fi
+
+            # Rule 4: Must contain Git Command Learned
+            if ! grep -qi "git" "$file"; then
+              echo "❌ ERROR in $file: Missing 'Git Command Learned'. Add a line like: Git Command Learned: git checkout -b branchname"
+              exit 1
+            fi
+
+            echo "✅ $file passed all checks!"
+          done
+
+          echo "🎉 All markdown files passed validation successfully!"
