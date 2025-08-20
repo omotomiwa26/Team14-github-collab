@@ -60,10 +60,8 @@ PRs cannot be merged unless all checks pass.
 
 1. Clone the repository
 
-   ```bash
-   git clone `https://github.com/omotomiwa26/Team14-github-collab.git`
-   cd `https://github.com/omotomiwa26/Team14-github-collab.git`
-   ```
+   `git clone https://github.com/omotomiwa26/Team14-github-collab.git`
+   `cd https://github.com/omotomiwa26/Team14-github-collab.git`
 
 2. Create a feature branch
 
