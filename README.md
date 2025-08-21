@@ -34,10 +34,10 @@ Each team member contributed by:
 
 | Name                 | GitHub Profile                                 | PR Link |
 |----------------------|------------------------------------------------|---------|
-| **Omotomiwa afonja** | [@omotomiwa26](https://github.com/omotomiwa26) | [PR #1](https://github.com/...) |
-| **foluso ajayi**     | [@ajayifoluso](https://github.com/ajayifoluso) | [PR #2](https://github.com/...) |
-| **bola omoniyi**     | [@bolaomoniyi](https://github.com/AishaIbrahim) | [PR #3](https://github.com/...) |
-| **john eniu**        | [@johneniu](https://github.com/DavidJohnson) | [PR #4](https://github.com/...) |
+| **Omotomiwa afonja** | [@omotomiwa26](https://github.com/omotomiwa26) | [PR #4](https://github.com/omotomiwa26/Team14-github-collab/pull/4) |
+| **foluso ajayi**     | [@ajayifoluso](https://github.com/ajayifoluso) | [PR #6](https://github.com/omotomiwa26/Team14-github-collab/pull/6) |
+| **bola omoniyi**     | [@Bolaomons](https://github.com/Bolaomons) | [PR #8](https://github.com/omotomiwa26/Team14-github-collab/pull/8) |
+| **john eniu**        | [@John-EAws](https://github.com/John-EAws) | [PR #7](https://github.com/omotomiwa26/Team14-github-collab/pull/7) |
 
 ## 📑 Assignment Document
 
